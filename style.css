@@ -1,0 +1,150 @@
+body {
+    background-color: #242424;
+}
+
+main {
+    margin: 0 auto;
+    width: 360px;
+    top: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.container {
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+#inicio {
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+@keyframes slide-left {
+    0% {transform: translateX(100%);}
+    100% {transform: translateX(0%);}
+}
+
+@keyframes slide-right {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(100%);}
+}
+
+.regiao-inicial, .menu-inicial {
+    display: none;
+    top: 0;
+    left: 0;
+    width: 360px;
+    position: absolute;
+}
+
+.regiao-mostrar {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 360px;
+    position: absolute;
+    animation-name: slide-left;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+.regiao-fechar {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 360px;
+    position: absolute;
+    animation-name: slide-right;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+#norte, #nordeste, #sudeste, #centro, #sul {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    position: relative;
+}
+
+.norte #norte, .nordeste #nordeste, .sudeste #sudeste, .centro #centro, .sul #sul {
+    display: block;
+    left: 0;
+    top: 0;
+    position: relative;
+}
+
+.menu-mostrar {
+    width: 360px;
+    top: 0;
+    left: 0;
+    height: 800px;
+    position: absolute;
+    overflow-y: scroll;
+    animation-name: slide-left;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+.menu-fechar {
+    width: 360px;
+    top: 0;
+    left: 0;
+    height: 800px;
+    position: absolute;
+    overflow-y: scroll;
+    animation-name: slide-right;
+    animation-delay: 0s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+#ac, #al, #am, #ap, #ba, #ce, #df, #es, #go, #ma, #mg, #ms, #mt, #pa, #pb, #pe, #pi, #pr, #rj, #rn, #ro, #rr, #rs, #sc, #se, #sp, #to {
+    display: none;
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 100%;
+}
+
+.ac #ac, .al #al, .am #am, .ap #ap, .ba #ba, .ce #ce, .df #df, .es #es, .go #go, .ma #ma, .mg #mg, .ms #ms, .mt #mt,
+.pa #pa, .pb #pb, .pe #pe, .pi #pi, .pr #pr, .rj #rj, .rn #rn, .ro #ro, .rr #rr, .rs #rs, .sc #sc, .se #se, .sp #sp, .to #to {
+    display: block;
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 100%;
+}
+
+#menu img {
+    width: 360px;
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+#menu #voltar {
+    top: 20px;
+    left: 0px;
+    position: absolute;
+    cursor: pointer;
+
+}
+
+#menu .link {
+    cursor: pointer;
+    width: 360px;
+    height: 100px;
+    bottom: 0px;
+    position: absolute;
+}

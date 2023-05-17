@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>o que o Brasil tem de delicioso</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <img id="inicio" src="01.svg" usemap="#brazil-map"/>
+            <map name="brazil-map">
+                <area target="" alt="norte" title="norte" href="" coords="128,496,17" shape="circle" onclick="mostrarRegiao(event,'norte')">
+                <area target="" alt="nordeste" title="nordeste" href="" coords="291,525,13" shape="circle" onclick="mostrarRegiao(event,'nordeste')">
+                <area target="" alt="sudeste" title="sudeste" href="" coords="269,617,18" shape="circle" onclick="mostrarRegiao(event,'sudeste')">
+                <area target="" alt="centro" title="centro" href="" coords="182,588,17" shape="circle" onclick="mostrarRegiao(event,'centro')">
+                <area target="" alt="sul" title="sul" href="" coords="218,692,16" shape="circle" onclick="mostrarRegiao(event,'sul')">
+            </map>
+            <div id="regiao" class="regiao-inicial">
+                <img id="norte" src="Android Large - 2.png" usemap="#norte-map"/>
+                <map name="norte-map">
+                    <area target="" alt="BRASIL" title="BRASIL" href="" coords="26,770,305,721" shape="rect" onclick="fecharRegiao(event,'norte')">
+                    <area target="" alt="AC" title="AC" href="" coords="50,505,13" shape="circle" onclick="mostrarMenu(event,'ac')">
+                    <area target="" alt="RO" title="RO" href="" coords="154,505,15" shape="circle" onclick="mostrarMenu(event,'ro')">
+                    <area target="" alt="TO" title="TO" href="" coords="318,505,16" shape="circle" onclick="mostrarMenu(event,'to')">
+                    <area target="" alt="AM" title="AM" href="" coords="122,436,15" shape="circle" onclick="mostrarMenu(event,'am')">
+                    <area target="" alt="PA" title="PA" href="" coords="253,434,15" shape="circle" onclick="mostrarMenu(event,'pa')">
+                    <area target="" alt="RR" title="RR" href="" coords="122,327,13" shape="circle" onclick="mostrarMenu(event,'rr')">
+                    <area target="" alt="AP" title="AP" href="" coords="277,328,16" shape="circle" onclick="mostrarMenu(event,'ap')">
+                </map>
+
+                <img id="nordeste" src="Android Large - 3.png" usemap="#nordeste-map"/>
+                <map name="nordeste-map">
+                    <area target="" alt="BRASIL" title="BRASIL" href="" coords="26,768,304,720" shape="rect" onclick="fecharRegiao(event,'nordeste')">
+                    <area target="" alt="BA" title="BA" href="" coords="140,485,17" shape="circle" onclick="mostrarMenu(event,'ba')">
+                    <area target="" alt="SE" title="SE" href="" coords="225,463,17" shape="circle" onclick="mostrarMenu(event,'se')">
+                    <area target="" alt="AL" title="AL" href="" coords="254,429,13" shape="circle" onclick="mostrarMenu(event,'al')">
+                    <area target="" alt="PI" title="PI" href="" coords="116,398,14" shape="circle" onclick="mostrarMenu(event,'pi')">
+                    <area target="" alt="PE" title="PE" href="" coords="183,399,15" shape="circle" onclick="mostrarMenu(event,'pe')">
+                    <area target="" alt="MA" title="MA" href="" coords="74,301,14" shape="circle" onclick="mostrarMenu(event,'ma')">
+                    <area target="" alt="CE" title="CE" href="" coords="179,305,17" shape="circle" onclick="mostrarMenu(event,'ce')">
+                    <area target="" alt="RN" title="RN" href="" coords="247,329,15" shape="circle" onclick="mostrarMenu(event,'rn')">
+                    <area target="" alt="PB" title="PB" href="" coords="266,364,17" shape="circle" onclick="mostrarMenu(event,'pb')">
+                </map>
+
+                <img id="sudeste" src="Android Large - 4.png"usemap="#sudeste-map"/>
+                <map name="sudeste-map">
+                    <area target="" alt="BRASIL" title="BRASIL" href="" coords="26,769,308,718" shape="rect" onclick="fecharRegiao(event,'sudeste')">
+                    <area target="" alt="SP" title="SP" href="" coords="103,533,16" shape="circle" onclick="mostrarMenu(event,'sp')">
+                    <area target="" alt="RJ" title="RJ" href="" coords="259,498,17" shape="circle" onclick="mostrarMenu(event,'rj')">
+                    <area target="" alt="MG" title="MG" href="" coords="218,400,17" shape="circle" onclick="mostrarMenu(event,'mg')">
+                    <area target="" alt="ES" title="ES" href="" coords="318,423,17" shape="circle" onclick="mostrarMenu(event,'es')">
+                </map>
+
+                <img id="centro" src="Android Large - 7.png" usemap="#centro-map"/>
+                <map name="centro-map">
+                    <area target="" alt="BRASIL" title="BRASIL" href="" coords="26,768,308,721" shape="rect" onclick="fecharRegiao(event,'centro')">
+                    <area target="" alt="MS" title="MS" href="" coords="189,508,17" shape="circle" onclick="mostrarMenu(event,'ms')">
+                    <area target="" alt="MT" title="MT" href="" coords="155,360,17" shape="circle" onclick="mostrarMenu(event,'mt')">
+                    <area target="" alt="GO" title="GO" href="" coords="275,441,18" shape="circle" onclick="mostrarMenu(event,'go')">
+                    <area target="" alt="DF" title="DF" href="" coords="324,404,17" shape="circle" onclick="mostrarMenu(event,'df')">
+                </map>
+
+                <img id="sul" src="Android Large - 9.png" usemap="#sul-map"/>
+                <map name="sul-map">
+                    <area target="" alt="BRASIL" title="BRASIL" href="" coords="25,769,311,718" shape="rect" onclick="fecharRegiao(event,'sul')">
+                    <area target="" alt="RS" title="RS" href="" coords="166,517,18" shape="circle" onclick="mostrarMenu(event,'rs')">
+                    <area target="" alt="SC" title="SC" href="" coords="276,461,17" shape="circle" onclick="mostrarMenu(event,'sc')">
+                    <area target="" alt="PR" title="PR" href="" coords="189,400,17" shape="circle" onclick="mostrarMenu(event,'pr')">
+                </map>
+            </div>
+
+        </div>
+        <div id="menu" class="menu-inicial">
+
+            <div id="ac">
+                <img src="AC.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'ac')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="al">
+                <img src="AL.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'al')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="am">
+                <img src="AM.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'am')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="ap">
+                <img src="AP.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'ap')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="ba">
+                <img src="BA.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'ba')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="ce">
+                <img src="CE.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'ce')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="df">
+                <img src="DF.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'df')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="es">
+                <img src="ES.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'es')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="go">
+                <img src="GO.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'go')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="ma">
+                <img src="MA.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'ma')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="mg">
+                <img src="MG.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'mg')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="ms">
+                <img src="MS.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'ms')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="mt">
+                <img src="MT.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'mt')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="pa">
+                <img src="PA.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'pa')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="pb">
+                <img src="PB.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'pb')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="pe">
+                <img src="PE.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'pe')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="pi">
+                <img src="PI.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'pi')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="pr">
+                <img src="PR.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'pr')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="rj">
+                <img src="RJ.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'rj')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="rn">
+                <img src="RN.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'rn')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="ro">
+                <img src="RO.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'ro')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="rr">
+                <img src="RR.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'rr')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="rs">
+                <img src="RS.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'rs')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="sc">
+                <img src="SC.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'sc')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="se">
+                <img src="SE.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'se')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="sp">
+                <img src="SP.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'sp')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+            <div id="to">
+                <img src="TO.jpeg"/>
+                <svg id="voltar" width="49" height="48" viewBox="0 0 49 48" fill="none" xmlns="http://www.w3.org/2000/svg"  onclick="fecharMenu(event,'to')">
+                    <rect x="-15" width="64" height="48" rx="9" fill="#D8D2C6"/>
+                    <path d="M12 23.5L31.5 10.9426L31.5 36.0574L12 23.5Z" fill="#242424"/>
+                </svg>
+                <div class="link"> </div>
+            </div>
+                
+        </div>
+    </main>
+</body>
+</html>
